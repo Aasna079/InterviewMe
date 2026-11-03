@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import DashboardLayout from "../components/layouts/DashboardLayout";
+import MainLayout from "../components/layouts/MainLayout";
 
 import Dashboard from "../pages/Dashboard";
 // import Practice from "../pages/Practice";
@@ -25,7 +25,7 @@ function AppRoutes() {
       <Route path="/register" element={<Register />} />
 
       {/* Main application pages - with shared layout */}
-      <Route element={<DashboardLayout />}>
+      <Route element={<MainLayout />}>
         <Route path="/dashboard" element={<Dashboard />} />
         {/* <Route path="/practice" element={<Practice />} /> */}
         {/* <Route path="/mock-interview" element={<MockInterview />} /> */}

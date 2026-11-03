@@ -2,11 +2,11 @@ import { Outlet } from "react-router-dom";
 
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
-import "../../styles/dashboard-layout.css";
+import "../../styles/MainLayout.css";
 
-function DashboardLayout() {
+function MainLayout() {
   return (
-    <div className="dashboard-layout">
+    <div className="main-layout">
       <Sidebar />
 
       <main className="main-content">
@@ -17,4 +17,4 @@ function DashboardLayout() {
   );
 }
 
-export default DashboardLayout;
+export default MainLayout;

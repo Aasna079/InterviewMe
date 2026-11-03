@@ -1,57 +1,5 @@
-
 /* =========================================
-   MAIN DASHBOARD STRUCTURE
-========================================= */
-
-.dashboard-layout {
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: clip;
-}
-
-
-/* =========================================
-   SIDEBAR POSITIONING
-========================================= */
-
-.sidebar {
-  width: var(--sidebar-width);
-  min-width: var(--sidebar-width);
-  min-height: 100vh;
-  flex-shrink: 0;
-}
-
-
-/* =========================================
-   MAIN CONTENT STRUCTURE
-========================================= */
-
-.main-content {
-  flex: 1;
-  min-width: 0;
-  max-width: 1600px;
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 12px;
-  padding: 14px 20px;
-}
-
-
-/* =========================================
-   ROW 1 — NAVBAR
-========================================= */
-
-.main-content > .top-navbar {
-  width: 100%;
-  flex-shrink: 0;
-}
-
-
-/* =========================================
-   ROW 2 — HERO SECTION
+   ROW 1 — HERO SECTION
    Welcome Banner + Quote Card
 ========================================= */
 
@@ -73,8 +21,8 @@
 
 
 /* =========================================
-   ROW 3 — PROGRESS SECTION
-   Contains ProgressCards component
+   ROW 2 — PROGRESS SECTION
+   Progress Cards
 ========================================= */
 
 .progress-grid {
@@ -84,7 +32,7 @@
 
 
 /* =========================================
-   ROW 4 — LEARNING SECTION
+   ROW 3 — LEARNING SECTION
    Continue Learning + Daily Challenge
    + Recommendations
 ========================================= */
@@ -109,7 +57,7 @@
 
 
 /* =========================================
-   ROW 5 — BOTTOM SECTION
+   ROW 4 — BOTTOM SECTION
    Skills + Quick Resources
 ========================================= */
 
@@ -137,8 +85,6 @@
 
 @media (max-width: 1100px) {
 
-  
-
   .learning-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -156,8 +102,6 @@
 
 @media (max-width: 760px) {
 
-  
-
   .hero-row {
     grid-template-columns: 1fr;
   }
@@ -170,18 +114,33 @@
 
 
 /* =========================================
-   MOBILE
+   OUTER CONTAINERS — ALL FOUR ROWS
 ========================================= */
 
-@media (max-width: 520px) {
+.hero-row,
+.progress-grid,
+.learning-row,
+.bottom-row {
+  background-color: #F8F8F3;
+  border: 1px solid #DDE5DD;
+  border-radius: 16px;
 
-  .sidebar {
-    display: none;
-  }
+  padding: 18px;
+  box-sizing: border-box;
+}
 
-  .main-content {
+
+/* =========================================
+   RESPONSIVE CONTAINER PADDING
+========================================= */
+
+@media (max-width: 760px) {
+
+  .hero-row,
+  .progress-grid,
+  .learning-row,
+  .bottom-row {
     padding: 14px;
-    gap: 14px;
   }
 
 }

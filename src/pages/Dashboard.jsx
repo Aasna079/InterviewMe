@@ -9,6 +9,8 @@ import Recommendations from "../components/Recommendations";
 import SkillsSection from "../components/SkillsSection";
 import QuickResources from "../components/QuickResources";
 
+import "../styles/Dashboard.css";
+
 function Dashboard() {
   return (
     <>
