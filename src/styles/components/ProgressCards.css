@@ -1,0 +1,29 @@
+.progress-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.progress-card {
+  min-width: 0;
+  min-height: 125px;
+  padding: 12px;
+  border: 1.5px dashed #78988A;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 760px) {
+  .progress-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .progress-cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,5 @@
+/* Drop the images in /assets and use these classes */
+.hero-banner   { background: url("assets/hero_bg.png")    center / cover no-repeat; border-radius: 16px; }
+.quote-card    { background: url("assets/quote_bg.png")   center / cover no-repeat; border-radius: 16px; }
+.sidebar-quote { background: url("assets/sidebar_bg.png") center / cover no-repeat; border-radius: 16px; }
+.page-footer   { background: url("assets/bottom_bg.png")  bottom center / 100% auto no-repeat; }

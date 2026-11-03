@@ -1,0 +1,8 @@
+/* Temporary component boundary */
+.quick-resources {
+  border: 1.5px dashed #78988A;
+  border-radius: 12px;
+  min-height: 150px;
+  padding: 16px;
+  box-sizing: border-box;
+}

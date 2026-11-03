@@ -1,0 +1,193 @@
+
+/* =========================================
+   MAIN DASHBOARD STRUCTURE
+========================================= */
+
+.dashboard-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+
+/* =========================================
+   SIDEBAR POSITIONING
+========================================= */
+
+.sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  min-height: 100vh;
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   MAIN CONTENT STRUCTURE
+========================================= */
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  max-width: 1600px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+  padding: 14px 20px;
+}
+
+
+/* =========================================
+   ROW 1 — NAVBAR
+========================================= */
+
+.main-content > .top-navbar {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   ROW 2 — HERO SECTION
+   Welcome Banner + Quote Card
+========================================= */
+
+.hero-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 3.6fr)
+    minmax(0, 1fr);
+
+  gap: var(--spacing-md);
+  width: 100%;
+  min-width: 0;
+}
+
+.hero-row > * {
+  min-width: 0;
+}
+
+
+/* =========================================
+   ROW 3 — PROGRESS SECTION
+   Contains ProgressCards component
+========================================= */
+
+.progress-grid {
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* =========================================
+   ROW 4 — LEARNING SECTION
+   Continue Learning + Daily Challenge
+   + Recommendations
+========================================= */
+
+.learning-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(0, 1.25fr)
+    minmax(0, 1fr);
+
+  gap: var(--spacing-sm);
+  width: 100%;
+  min-width: 0;
+  align-items: stretch;
+}
+
+.learning-row > * {
+  min-width: 0;
+}
+
+
+/* =========================================
+   ROW 5 — BOTTOM SECTION
+   Skills + Quick Resources
+========================================= */
+
+.bottom-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 2.5fr)
+    minmax(0, 1fr);
+
+  gap: var(--spacing-sm);
+  width: 100%;
+  min-width: 0;
+  align-items: stretch;
+}
+
+.bottom-row > * {
+  min-width: 0;
+}
+
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .sidebar {
+    width: 210px;
+    min-width: 210px;
+  }
+
+  .learning-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bottom-row {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 760px) {
+
+  .sidebar {
+    width: 76px;
+    min-width: 76px;
+  }
+
+  .hero-row {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-row {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    padding: 14px;
+    gap: 14px;
+  }
+
+}
